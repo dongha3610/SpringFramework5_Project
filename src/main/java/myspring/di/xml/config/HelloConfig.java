@@ -36,6 +36,7 @@ public class HelloConfig {
 	public Hello hello() {
 		Hello hello = new Hello();
 		hello.setName(env.getProperty("app.xmlsetter.name")); //스프링
+		hello.setPrinter(stringPrinter());
 		return hello;
 	}
 
