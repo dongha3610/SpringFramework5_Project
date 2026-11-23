@@ -35,6 +35,7 @@ public class HelloConfig {
 	@Scope(value = "singleton")
 	public Hello hello() {
 		Hello hello = new Hello();
+		//hello.setName("스프링")
 		hello.setName(env.getProperty("app.xmlsetter.name")); //스프링
 		hello.setPrinter(stringPrinter());
 		return hello;
