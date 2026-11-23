@@ -1,9 +1,13 @@
 package myspring.di.annotation.config;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
+
+import myspring.di.annotation.HelloBean;
 
 
 /*
@@ -14,5 +18,11 @@ import org.springframework.test.context.support.AnnotationConfigContextLoader;
 @ContextConfiguration(classes = HelloBeanConfig.class,
 	loader = AnnotationConfigContextLoader.class)
 public class AnnotatedHelloBeanConfigTest {
-
+	@Autowired
+	HelloBean hello;
+	
+	@Test
+	void hello() {
+		
+	}
 }
